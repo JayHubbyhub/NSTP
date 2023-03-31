@@ -5,5 +5,7 @@
 {% block content %}
 <h1>Welcome to the Lost and Bound homepage</h1>
 <button onclick="window.location.href='../../items/lostitems/';">View Lost Items</button>
-<button onclick="window.location.href='../../verification/';">Submit a Verification Form</button>
+
+<input placeholder="Tree ID Number" type="number" name="id_num" class="string" required>
+<button onclick="window.location.href='../../verification/generate-qr/EnterTreeNumberHere';">Generate a QR Code</button>
 {% endblock %}

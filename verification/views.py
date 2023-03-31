@@ -1,3 +1,7 @@
+import qrcode
+
+from django.http import HttpResponse
+
 from django.shortcuts import render
 from django.urls import reverse
 from .forms import UploadForm
@@ -19,3 +23,20 @@ def verification(request):
 def displayVerForms(request):
     all_verforms = Verification.objects.filter(isChecked=False)
     return render(request, 'displayverforms.html', {'all_verforms': all_verforms})
+
+def generate_qr(request, data):
+    # Generate QR code image
+    img = qrcode.make(data)
+
+    # Return image as HTTP response
+    response = HttpResponse(content_type='image/png')
+    img.save(response, 'PNG')
+    return response
+
+# def generate_qr(request):
+#     if request.method == 'POST':
+#         id_num = request.POST['id_num']
+#         qr_url = f"../../verification/generate-qr/{id_num}"
+#         return render(request, 'qrCodeGenerator.html', {'qr_url': qr_url})
+
+#     return render(request, 'qrCodeGenerator.html')

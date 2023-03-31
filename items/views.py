@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.template import Template, Context, loader
 from .models import Item
+#from .models import Tree
 from .forms import ItemForm
 from django.template.loader import get_template
 from django.views import View
@@ -16,6 +17,16 @@ class lostItems(View):
         }
         
         return render(request, "items/lostitems.html", context)
+
+# class lostItems(View):
+#     template = "lostitems.html"
+#     def get(self, request):
+#         all_lost_items = Tree.objects.filter(isLost=True)
+#         context = {
+#             "all_lost_items": all_lost_items
+#         }
+        
+#         return render(request, "items/lostitems.html", context)
     
 def newLostItem(request):
     if request.method == "POST":
