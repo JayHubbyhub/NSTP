@@ -1,0 +1,82 @@
+h1 {
+    text-align: center;
+    color:rgb(78, 216, 80);
+    text-shadow:2px 2px 5px rgb(0, 0, 0);
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    font-size: 50px;
+}
+h2 {
+    color:rgb(78, 216, 80);
+    font-size: 20px;
+    font-family: "Arial Narrow", sans-serif;
+}
+
+p {
+    color:rgb(0, 180, 216);
+    font-size: 25px;
+    font-family: "New Century Schoolbook", "TeX Gyre Schola", serif;
+}
+a {
+    color:rgb(173, 247, 255);
+    font-size: 20px;
+    font-family: "Arial Narrow", sans-serif;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    text-align: center;
+    padding: 1em;
+    max-width: 240px;
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 100% auto;
+    background: rgb(37, 100, 217);
+}
+
+input
+{
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    border-radius: 10px;
+}
+
+label
+{
+    color: rgb(78, 216, 80);
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+button
+{
+    color: rgb(16, 6, 6);
+    margin: 15px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;  
+    border-radius: 10px;
+    background: linear-gradient(to bottom, white 0%, gray 100%);
+    border: 1px solid darkslategray;
+    box-sizing: border-box;
+    padding: 10px 12px;
+}
+
+span {
+    display: block;
+    color: orange;
+    
+  }

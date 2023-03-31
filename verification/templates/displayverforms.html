@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}List of Submitted Verification Forms{% endblock %}
+{% block content %}
+  <center><h1>List of Submitted Verification Forms</h1></center>
+  {% for vform in all_verforms %}
+    {% if vform.isChecked == False %}
+    <b>{{vform.id}}</b> | {{vform.category}}<br>
+    {{vform.id_num}}
+    <li><b>Submitted on: </b>{{vform.submissionDate}}</li>
+    <b></b><a href="/media/{{vform.form}}">Verification Form</a>
+    <br><br>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
