@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <center><h1>Inventory of Cacao Trees</h1></center>
+  {% for tree in all_tree_records %}
+    <li><b>Location: </b>{{tree.section}}</li>
+    <li><b>Age: </b>{{tree.age}}</li>
+    <li><b>Variety: </b>{{tree.variety}}</li>
+    <li><b>Soil Moisture: </b>{{tree.soil_moisture}}</li>
+    <li><b>Temperature: </b>{{tree.temperature}}</li>
+    <li><b>Humidity: </b>{{tree.humidity}}</li>
+    <li><b>Light Exposure: </b>{{tree.light_exposure}}</li>
+    <li><b>Nutrient Levels: </b>{{tree.nutrient_levels}}</li>
+    <li><b>Pest Disease Outbreaks: </b>{{tree.pest_disease_outbreaks}}</li>
+    <li><b>Harvest Times: </b>{{tree.harvestTime}}</li>
+    {% if tree.tree_image %}
+      <li><b>Tree Picture:</b></li>
+      <img src="{{tree.tree_image.url}}">
+    {% endif %}
+    <br>
+  {% endfor %}
+  <a href="/trees/newTreeRecord"> <button>Submit a Tree</button> </a>
+  <button onclick="window.location.href='../../login/homepage/';">Back to Homepage</button>
+  {% endblock %}

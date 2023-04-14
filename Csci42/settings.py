@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login.apps.LoginConfig',
-    'items.apps.ItemsConfig',
+    'trees.apps.TreeConfig',
     'verification.apps.VerificationConfig',
 ]
 
