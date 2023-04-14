@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login.apps.LoginConfig',
     'trees.apps.TreeConfig',
+    'verification.apps.VerificationConfig',
 ]
 
 MIDDLEWARE = [

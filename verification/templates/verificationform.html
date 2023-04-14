@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Verification Form{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Lost & Bound!</h1>
+
+    <h2><b>Verification Form</b></h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    {{message}}
+    <a href='//docs.google.com/document/d/1uhX1RKEUKBY5bcqR-zAs_Zt44-ajDsMjR63tl77x7Lw/edit?usp=sharing'; target="_blank"><button>Form Template</button></a>
+    <button onclick="window.location.href='../../login/homepage/';">Back to Homepage</button>
+{% endblock %}
