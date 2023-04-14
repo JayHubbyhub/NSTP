@@ -4,7 +4,8 @@ from .models import Tree
 from .forms import TreeRecordForm
 from django.template.loader import get_template
 from django.views import View
-
+from django.http import HttpResponse
+import qrcode
 
 # Create your views here.
 class treeRecords(View):
@@ -26,3 +27,12 @@ def newTreeRecord(request):
         else:
             tree_record_form = TreeRecordForm()
     return render(request, "trees/add.html", {"tree_record_form": TreeRecordForm})
+
+def generate_qr(request, data):
+    # Generate QR code image
+    img = qrcode.make(data)
+
+    # Return image as HTTP response
+    response = HttpResponse(content_type='image/png')
+    img.save(response, 'PNG')
+    return response
