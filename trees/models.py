@@ -13,7 +13,7 @@ class Tree(models.Model):
     pest_disease_outbreaks = models.CharField(max_length=500)
     harvestTime = models.TimeField(auto_now=False, auto_now_add=False)
     harvestDate = models.DateField(null=True, blank=True)
-    tree_image = models.ImageField(upload_to="lostItems", null=True, blank=True)
+    tree_image = models.ImageField(upload_to="treeRecords", null=True, blank=True)
 
     
     def __str__(self):
